@@ -1,0 +1,9 @@
+#!/bin/bash
+
+string="Gaston"
+numero=10
+comando='ps -ef | grep bash | grep -v grep'
+
+echo $string
+echo $numero
+echo $comando
