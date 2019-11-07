@@ -1,0 +1,17 @@
+
+#!/bin/bash
+
+lista=(uno dos tres)
+lista[0]="cuatro"
+
+echo "La lista contiene valores = ${lista[*]}"
+echo "La lista tiene un total de ${#lista[*]} items"
+echo "El primer valor de las lista tiene ${#lista[0]} caracteres"
+
+if [ $? -eq 0 ]
+then
+        echo "El comando anterior ha finalidado con éxito"
+else
+        echo "El comando anterior ha fallado"
+fi
+
