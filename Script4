@@ -1,0 +1,12 @@
+#!/bin/bash
+
+nombre="Gaston"
+apellido="Urbina"
+dia=`date +%D` #Indica el día en el que estamos
+
+if [ "$nombre" == "Gaston" ]
+then
+        echo "Hola $nombre, $apellido. Haz ingresado al sistema hoy $dia."
+else
+        echo "Como no te llamas Gaston, estas leyedno este mensaje"
+fi
