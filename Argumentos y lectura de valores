@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "El script ejecutado es $0"
+echo "El primer valor introducido¨es $1"
+echo "El segundo valor introducido es $2"
+
+echo "El recuento de valores $*"
+echo "Has indcado un total de $# argumentos"
+
+echo "Agrega un argumento mas"
+
+read x
+
+read -p "Y otro argumento mas" y
+
+echo "Lista final de argumentos $@ $x $y "
