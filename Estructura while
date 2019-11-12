@@ -10,3 +10,9 @@ do
         sleep 1
         ((i--))
 done
+
+while true
+do
+        echo "No voy a parar hasta que apriete ctrl+z"
+        sleep 1
+done
