@@ -1,0 +1,19 @@
+#!/bin/bash
+
+lista=(Gaston Urbina Laura Rodriguez)
+
+for i in ${lista[@]}
+do
+        echo $i
+done
+
+##Vemos las palabras de la lista que comienzan con G
+
+for i in ${lista[@]}
+do
+        if [[ $i == G* ]]
+        then
+                echo $i
+        fi
+done
+
