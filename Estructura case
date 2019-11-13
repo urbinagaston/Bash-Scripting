@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+case $1 in
+        [Ss]tart)
+        echo "Inicia programa"
+        ;;
+        [Ss]top)
+        echo "Programa detenido"
+        ;;
+        ayuda|*)
+        echo "Para iniciar escriba start y para detener stop, no importa mayusucla"
+        ;;
+esac
