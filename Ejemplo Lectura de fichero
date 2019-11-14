@@ -1,0 +1,20 @@
+#!/bin/bash
+##$1 Es el primer argumento de entrada
+fichero=$1
+
+posicion=1
+
+while read line
+do
+        echo "La linea $posicion = $line"
+        ((posicion++))
+##con < realizamos la redireccion llamando a la variable que tiene el fichero importante.
+done < $fichero
+
+##cat lo que hace es mostrar por pantalla el contenido de un fichero y almacenar una variable.
+contenido=`cat $fichero`
+for contenidos in $contenido
+do
+        echo $contenidos
+done
+
