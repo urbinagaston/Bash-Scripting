@@ -1,0 +1,39 @@
+#!/bin/bash
+
+direccion=(/tmp /root /etc /cualquiercosa)
+
+case $1 in
+        [Vv]erificar)
+        echo "Verificando las carpetas"
+        i=0
+        ##con -lt establecemos si es menor y # es recuento de todas las variables
+        while [ $i -lt ${#direccion[*]} ]
+        do
+        ##-d comprueba si son carpetas o directorios
+                if [ -d ${direccion[$i]} ]
+                then
+                        echo "${direccion[$i]} si esta"
+                else
+                        echo "${direccion[$i]} no esta"
+                fi
+                ((i++))
+        done
+        ;;
+        [Cc]rear)
+                echo "Creando carpeta"
+                ##@ es para llamarlo como lista
+                for z in ${direccion[@]}
+                do
+                        if [ -d $z ]
+                        then
+                                echo "El directorio $z ya existe"
+                        else
+                                echo "Creando el directorio $z"
+                                mkdir $z
+                        fi
+                done
+        ;;
+        *)
+        echo "Para iniciar este bash debe escribir Verificar o Crear"
+        ;;
+esac
