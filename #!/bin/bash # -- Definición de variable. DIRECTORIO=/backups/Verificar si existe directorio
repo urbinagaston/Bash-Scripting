@@ -1,0 +1,10 @@
+#!/bin/bash
+# -- Definición de variable.
+DIRECTORIO=/backups/ntop
+
+# -- Creando directorios necesarios.
+echo
+echo " --> Preparando directorio $DIRECTORIO"
+if [ ! -d $DIRECTORIO ]; then
+    mkdir -vp $DIRECTORIO
+fi
